@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
+    
+    <!-- Burger menu for mobile -->
+    <button class="burger" id="burger-menu" aria-label="Otwórz menu nawigacji">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    .burger { display: none; position: absolute; top: 22px; right: 24px; width: 38px; height: 38px; background: none; border: none; flex-direction: column; justify-content: center; align-items: center; z-index: 1002; cursor: pointer; gap: 6px; padding: 0; }
+    .burger span { display: block; width: 28px; height: 4px; background: #111; border-radius: 2px; transition: all 0.25s; }
+    .burger.active span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .burger.active span:nth-child(2) { opacity: 0; }
+    .burger.active span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+    @media (max-width: 800px) { .burger { display: flex; } nav .nav-container ul { position: fixed; top: 0; right: -100vw; width: 70vw; max-width: 320px; height: 100vh; background: #fff; box-shadow: -2px 0 18px 0 rgba(0,0,0,0.10); flex-direction: column; align-items: flex-start; padding: 80px 32px 32px 32px; gap: 18px; transition: right 0.28s cubic-bezier(.7,.2,.2,1); z-index: 1001; font-size: 1.13rem; } nav .nav-container ul.open { right: 0; } nav .nav-container ul li { width: 100%; } nav .nav-container ul li a { width: 100%; display: block; padding: 12px 0; } .logo .typing-text, .logo .cursor { display: none !important; } nav .nav-container { position: relative; } }
+    </style>
     <title>Osoby, które mnie inspirują</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.getElementById('burger-menu');
+      const navList = document.querySelector('nav .nav-container ul');
+      if (burger && navList) {
+        burger.addEventListener('click', function () {
+          burger.classList.toggle('active');
+          navList.classList.toggle('open');
+        });
+        navList.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function () {
+            burger.classList.remove('active');
+            navList.classList.remove('open');
+          });
+        });
+      }
+    });
+    </script>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/ce61199c3b.js" crossorigin="anonymous"></script>
   </head>
@@ -21,6 +54,8 @@
         <ul>
           <li><a href="index.html">Strona główna</a></li>
           <li><a href="inspiracje.html">Inspiracje</a></li>
+          <li><a href="omnie.html">O mnie</a></li>
+          <li><a href="projekty.html">Projekty</a></li>
         </ul>
       </div>
     </nav>
@@ -67,9 +102,11 @@
         <h2 class="section-header">Osoby które mnie inspirują</h2>
         <div class="section-line"></div>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
-      </p>
+      <div style="max-width: 700px; margin: 0 auto;">
+        <p style="font-size:1.13rem;line-height:1.85;color:#444;text-align:justify;margin-bottom:18px;letter-spacing:0.01em;">
+            Inspiracją dla mnie są wymienione powyżej osoby Bill Gates Linus Torvalds i świętej pamięci Terry Davis. Dokonali oni czegoś ogromnego. Bill Gates założył Microsoft w swoim garażu. Teraz jego firma jest gigantem technologicznym. Zbudował on imperium co nie jest takie proste. Dzięki jego pracy i determinacji mamy teraz wspaniałe narzędzia pokroju Visual Studio oraz Visual Studio Code. Jego firma stworzyła też C# język który pasuje prawie wszędzie. Inspiruje mnie on do działania do wiary w siebie. Mam nawet jego książkę. Następną osobą jest ojciec Linuxa pan Linus Torvalds. To dzięki niemu mamy dziś takie systemy operacyjne jak Ubuntu Debian Fedora oraz prawie cały internet stoi na Linuksie. Imponuje mi on tym że wybrał C i tylko go się trzyma. Zbudował on kernel który teraz jest jednym z ważniejszych na świecie. I zrobił on to sam z pomocą open source. Osobą która mi imponuje i mnie inspiruje do pracy jest świętej pamięci Terry Davis. On sam stworzył własny kompilator własny język Holy C a tym językiem napisał własny kernel oraz system operacyjny. To czego on dokonał jest bardzo ciężkie i wymaga ogromnej wiedzy. Niestety Terry miał problemy psychiczne i nie ma go już z nami.
+        </p>
+      </div>
     </section>
 
     </main>

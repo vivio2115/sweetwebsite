@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - vivio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://kit.fontawesome.com/ce61199c3b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <span class="logo" style="display:flex;align-items:center;gap:12px;">
+          vivio
+          <span id="typing-text" class="typing-text"></span>
+          <span class="cursor">|</span>
+        </span>
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="../inspiracje.html">Inspiracje</a></li>
+          <li><a href="../omnie.html">O mnie</a></li>
+          <li><a href="../projekty.html">Projekty</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Burger menu for mobile -->
+    <button class="burger" id="burger-menu" aria-label="Otwórz menu nawigacji">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <main class="container">
+      <header class="hero">
+        <div class="hero-row" style="flex-direction:column;align-items:stretch;gap:0;">
+          <div class="project-banner-wrap">
+            <!-- <img src="../assets/img/img_port.png" alt="Baner projektu VPS" class="project-banner" /> -->
+          </div>
+          <div class="hero-text" style="margin-top:28px;">
+            <h1 style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <span aria-label="Portfolio" role="img">⚙️</span> Język Fminus (F-)
+            </h1>
+            <div class="hero-desc">Własny jezyk programowania napisany w C++ oraz C</div>
+          </div>
+        </div>
+    <style>
+    .burger {
+      display: none;
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      width: 38px;
+      height: 38px;
+      background: none;
+      border: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1002;
+      cursor: pointer;
+      gap: 6px;
+      padding: 0;
+    }
+    .burger span {
+      display: block;
+      width: 28px;
+      height: 4px;
+      background: #111;
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .burger.active span:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+    .burger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    @media (max-width: 800px) {
+      .burger {
+        display: flex;
+      }
+      nav .nav-container ul {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        width: 70vw;
+        max-width: 320px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -2px 0 18px 0 rgba(0,0,0,0.10);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 32px 32px 32px;
+        gap: 18px;
+        transition: right 0.28s cubic-bezier(.7,.2,.2,1);
+        z-index: 1001;
+        font-size: 1.13rem;
+      }
+      nav .nav-container ul.open {
+        right: 0;
+      }
+      nav .nav-container ul li {
+        width: 100%;
+      }
+      nav .nav-container ul li a {
+        width: 100%;
+        display: block;
+        padding: 12px 0;
+      }
+      .logo .typing-text,
+      .logo .cursor {
+        display: none !important;
+      }
+    }
+    @media (max-width: 800px) {
+      nav .nav-container {
+        position: relative;
+      }
+    }
+      .project-banner-wrap {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.233);
+        background: #f7f7f7;
+        aspect-ratio: 16/5;
+        min-height: 180px;
+        max-height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .project-banner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      @media (max-width: 900px) {
+        .project-banner-wrap { max-width: 100%; min-height: 120px; max-height: 160px; }
+      }
+    </style>
+      </header>
+      <section class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Opis projektu</h2>
+          <div class="section-line"></div>
+        </div>
+        <p>
+        N/A
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Technologie</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="project-tags" style="margin-bottom:18px;">
+          <span class="project-tag">C++</span>
+          <span class="project-tag">C</span>
+          <span class="project-tag">Cmake</span>
+        </div>
+        <ul class="skills">
+          <li><strong>BRAK</strong> BRAK</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Status</h2>
+          <div class="section-line"></div>
+        </div>
+        <ul class="skills">
+          <li><strong>Stan:</strong> nierozpoczęty</li>
+          <li><strong>Ostatnia aktualizacja:</strong> lipiec 2025</li>
+        </ul>
+      </section>
+
+
+      <section class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Roadmapa</h2>
+          <div class="section-line"></div>
+        </div>
+        <ul class="skills">
+          <li><strong>Zaplanowanie języka</strong> – projekt kompilatora</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Changelog</h2>
+          <div class="section-line"></div>
+        </div>
+        <ul class="skills">
+          <li><strong>2025-07-29:</strong> Rozpoczęcie planowania projektu</li>
+        </ul>
+      </section>
+
+    </main>
+    <footer>
+      <p>© 2025 vivio</p>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="../loader.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.getElementById('burger-menu');
+      const navList = document.querySelector('nav .nav-container ul');
+      if (burger && navList) {
+        burger.addEventListener('click', function () {
+          burger.classList.toggle('active');
+          navList.classList.toggle('open');
+        });
+        navList.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function () {
+            burger.classList.remove('active');
+            navList.classList.remove('open');
+          });
+        });
+      }
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O mnie - vivio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Lokalny styl tylko dla tej podstrony */
+      .tech-icons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 18px;
+      }
+      .tech-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+        min-width: 54px;
+      }
+      .tech-icon-bg {
+        background: #fff !important;
+        border-radius: 14px;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10);
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2px;
+        margin-top: 0;
+        padding: 7px;
+        box-sizing: border-box;
+        /* Wymusza białe tło nawet pod przezroczystym SVG */
+        position: relative;
+        overflow: hidden;
+      }
+      .tech-icon-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        z-index: 0;
+        border-radius: 14px;
+      }
+      .tech-icon-bg img {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .tech-icon img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        display: block;
+      }
+      .tech-icon-label {
+        font-size: 0.97rem;
+        color: #444;
+        margin-top: 0px;
+        text-align: center;
+        font-weight: 500;
+      }
+      .tech-icons-below {
+        margin-top: 6px !important;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 18px;
+      }
+      @media (max-width: 600px) {
+        .tech-icon-bg { width: 36px; height: 36px; border-radius: 8px; }
+        .tech-icon img { width: 18px; height: 18px; }
+        .tech-icons, .tech-icons-below { gap: 8px; }
+        .tech-icon-label { font-size: 0.82rem; }
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/ce61199c3b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <span class="logo" style="display:flex;align-items:center;gap:12px;">
+          vivio
+          <span id="typing-text" class="typing-text"></span>
+          <span class="cursor">|</span>
+        </span>
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="inspiracje.html">Inspiracje</a></li>
+          <li><a href="omnie.html">O mnie</a></li>
+          <li><a href="projekty.html">Projekty</a></li>
+        </ul>
+      </div>
+    <!-- Burger menu for mobile -->
+    <button class="burger" id="burger-menu" aria-label="Otwórz menu nawigacji">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </nav>
+
+    <style>
+    .burger { display: none; position: absolute; top: 22px; right: 24px; width: 38px; height: 38px; background: none; border: none; flex-direction: column; justify-content: center; align-items: center; z-index: 1002; cursor: pointer; gap: 6px; padding: 0; }
+    .burger span { display: block; width: 28px; height: 4px; background: #111; border-radius: 2px; transition: all 0.25s; }
+    .burger.active span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .burger.active span:nth-child(2) { opacity: 0; }
+    .burger.active span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+    @media (max-width: 800px) { .burger { display: flex; } nav .nav-container ul { position: fixed; top: 0; right: -100vw; width: 70vw; max-width: 320px; height: 100vh; background: #fff; box-shadow: -2px 0 18px 0 rgba(0,0,0,0.10); flex-direction: column; align-items: flex-start; padding: 80px 32px 32px 32px; gap: 18px; transition: right 0.28s cubic-bezier(.7,.2,.2,1); z-index: 1001; font-size: 1.13rem; } nav .nav-container ul.open { right: 0; } nav .nav-container ul li { width: 100%; } nav .nav-container ul li a { width: 100%; display: block; padding: 12px 0; } .logo .typing-text, .logo .cursor { display: none !important; } nav .nav-container { position: relative; } }
+    </style>
+
+    <main class="container">
+      <header class="hero">
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.getElementById('burger-menu');
+      const navList = document.querySelector('nav .nav-container ul');
+      if (burger && navList) {
+        burger.addEventListener('click', function () {
+          burger.classList.toggle('active');
+          navList.classList.toggle('open');
+        });
+        navList.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function () {
+            burger.classList.remove('active');
+            navList.classList.remove('open');
+          });
+        });
+      }
+    });
+    </script>
+        <div class="hero-row">
+          <img src="assets/gifs/sigma.gif" alt="Avatar Vivio" class="avatar hero-avatar" />
+          <div class="hero-text">
+            <h1 style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <span aria-label="Cześć!" role="img">👋</span> Cześć, jestem vivio
+            </h1>
+            <div class="hero-desc">Jestem uczniem jednego z najlepszych techników w Polsce (top 20). Interesuję się programowaniem, lotnictwem i matematyką.<br>Koduję głównie w JS, Go, HTML, CSS, PHP. Uczę się C, C++, ASM. Znam też Java i Python.</div>
+          </div>
+        </div>
+      </header>
+
+      <section id="omnie" class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Małe bio</h2>
+          <div class="section-line"></div>
+        </div>
+        <p>
+          W 2020 podczas pandemii zacząłem interesować się programowaniem oraz komputerami. Od tamtego czasu cały czas powiększam swoją wiedzę o nowe języki programowania oraz technologie.
+        </p>
+        <p>
+          Moje pierwsze skrypty to były boty do Discorda oraz jakieś proste aplikacje w Pythonie. Tworzyłem nawet własną grę w Pythonie, lecz porzuciłem tamten projekt na rzecz uczenia się JavaScript oraz Golanga.
+        </p>
+        <p>
+          W 2023 ukończyłem kurs Pythona, na którym nauczyłem się myśleć jak programista i planować swoje programy. Od tamtego czasu nie używam już Pythona (heh). Teraz skupiam się na JS oraz Go.
+        </p>
+        <p>
+            Głównie skupiam się na backendzie (ponieważ jak sami widzicie, mój frontend nie jest aż taki ładny). A kiedy czuję się na siłach, uczę się low-level coding, czyli pisania kodu w ASM oraz w C. Aktualnie uczę się właśnie C, ASM oraz frameworka do PHP – Laravel.
+        </p>
+        <p>
+            Gdzieś po drodze uczyłem się Javy, lecz niestety nie pamiętam już kiedy to robiłem. Umiem pisać jakieś proste programy w Javie, pluginy do Minecraft, lecz aż tak nie lubię tego języka ;). 
+        </p>
+        <p>
+            Lubie czasem sobie usuiaść wieczorem odpalić spotyfi i napisać dla kogoś bota niezależnie od tego jak cięzkie to jest zadanie. Zdarza też się że czasem jak mi sie niudzi to ise uczę ASM tak pobocznie.
+        </p>
+        <p>
+            Posiadam przeciętną wiedzę na temat Linuxa, bardzo dobrze czuję się w jego świecie oraz lubię zarządzać serwerami VPS z Linuxem (Ubuntu).
+        </p>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Umiejętności</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="tech-block tech-block-below">
+          <div class="tech-header-row">
+            <h3 class="tech-header" style="font-size:1.13rem;font-weight:600;">Koduję najwięcej w</h3>
+          </div>
+          <div class="tech-icons tech-icons-below">
+            <span class="tech-icon" title="HTML5"><img src="assets/icons/html.svg" alt="HTML5" /></span>
+            <span class="tech-icon" title="CSS3"><img src="assets/icons/css.svg" alt="CSS3" /></span>
+            <span class="tech-icon" title="JavaScript"><img src="assets/icons/js.svg" alt="JavaScript" /></span>
+            <span class="tech-icon" title="Go"><img src="assets/icons/go.svg" alt="Go" /></span>
+            <span class="tech-icon" title="PHP"><img src="assets/icons/php.svg" alt="PHP" /></span>
+          </div>
+        </div>
+        <div class="tech-block tech-block-below" style="margin-top:32px;">
+          <div class="tech-header-row">
+            <h3 class="tech-header" style="font-size:1.13rem;font-weight:600;">Uczę się</h3>
+          </div>
+          <div class="tech-icons tech-icons-below">
+            <span class="tech-icon" title="C/C++"><img src="assets/icons/cpp.svg" alt="C/C++" /></span>
+            <span class="tech-icon" title="Laravel"><img src="assets/icons/laravel.svg" alt="Laravel" /></span>
+            <span class="tech-icon" title="Assembler"><img src="assets/icons/asm.svg" alt="Assembler" /></span>
+          </div>
+        </div>
+        <div class="tech-block tech-block-below" style="margin-top:32px;">
+          <div class="tech-header-row">
+            <h3 class="tech-header" style="font-size:1.13rem;font-weight:600;">Znam też</h3>
+          </div>
+          <div class="tech-icons tech-icons-below">
+            <span class="tech-icon" title="Java"><img src="assets/icons/java.svg" alt="Java" /></span>
+            <span class="tech-icon" title="Python"><img src="assets/icons/python.svg" alt="Python" /></span>
+          </div>
+        </div>
+        <div class="tech-block tech-block-below" style="margin-top:32px;">
+          <div class="tech-header-row">
+            <h3 class="tech-header" style="font-size:1.13rem;font-weight:600;">Edytory i narzędzia</h3>
+          </div>
+          <div class="tech-icons tech-icons-below">
+            <span class="tech-icon" title="VSCode"><img src="assets/icons/vscode.svg" alt="VSCode" /></span>
+            <span class="tech-icon" title="Git"><img src="assets/icons/git.svg" alt="Git" /></span>
+            <span class="tech-icon" title="Docker"><img src="assets/icons/docker.svg" alt="Docker" /></span>
+          </div>
+        </div>
+      <div class="tech-block tech-block-below" style="margin-top:32px;">
+          <div class="tech-header-row">
+            <h3 class="tech-header" style="font-size:1.13rem;font-weight:600;">Systemy operacyjne</h3>
+          </div>
+          <div class="tech-icons tech-icons-below">
+            <span class="tech-icon" title="Windows"><img src="assets/icons/windows.svg" alt="windows" /></span>
+            <span class="tech-icon" title="Fedora"><img src="assets/icons/fedora.svg" alt="Fedora" /></span>
+            <span class="tech-icon" title="Ubuntu"><img src="assets/icons/ubuntu.svg" alt="Ubuntu" /></span>
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <section id="sprzet" class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Sprzęt</h2>
+          <div class="section-line"></div>
+        </div>
+        <ul class="skills">
+          <li><strong>ASUS TUF Gaming A15</strong> (1TB SSD, 32GB RAM, Windows 11 - do gier)</li>
+          <li><strong>Lenovo ThinkPad E16</strong> (Ryzen 5-7535HS, 32GB RAM, 512GB SSD, Fedora - do kodowania, planowany)</li>
+        </ul>
+      </section>
+
+      <section id="zainteresowania" class="section">
+        <div class="section-header-row">
+          <h2 class="section-header">Zainteresowania</h2>
+          <div class="section-line"></div>
+        </div>
+        <ul class="skills">
+          <li><i class="fas fa-plane" style="color:#535353;"></i> Lotnictwo, symulatory lotnicze</li>
+          <li><i class="fas fa-calculator" style="color:#535353;"></i> Matematyka</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 vivio</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="loader.js"></script>
+  </body>
+</html>
