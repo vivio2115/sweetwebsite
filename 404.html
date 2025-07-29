@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #fff;
+        --text-primary: #1a1a1a;
+        --text-secondary: #666;
+        --accent: #000;
+        --border: #e5e5e5;
+      }
+      html, body {
+        height: 100%;
+      }
+      body {
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text-primary);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .center404 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100vw;
+      }
+      .cat404 {
+        width: 260px;
+        height: 260px;
+        object-fit: contain;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+        margin-bottom: 32px;
+        background: #fff;
+      }
+      .msg404 {
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+      .desc404 {
+        font-size: 1.15rem;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+        text-align: center;
+      }
+      .btn404 {
+        margin-top: 10px;
+        padding: 14px 32px;
+        border-radius: 12px;
+        background: #111;
+        color: #fff;
+        font-size: 1.08rem;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: background 0.18s, color 0.18s;
+      }
+      .btn404:hover {
+        background: #222;
+        color: #fff;
+      }
+      @media (max-width: 600px) {
+        .cat404 { width: 160px; height: 160px; }
+        .msg404 { font-size: 1.2rem; }
+        .desc404 { font-size: 1rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center404">
+      <img src="assets/gifs/cat-gato.gif" alt="cat gif" class="cat404" />
+      <div class="msg404">E misiek bo to nie ten URL</div>
+      <div class="desc404">Strona której szukasz nie istnieje</div>
+      <a href="/" class="btn404">Wróć na stronę główną</a>
+    </div>
+    <script>
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Enter') window.location.href = '/';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osoby, które mnie inspirują</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ce61199c3b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <span class="logo" style="display:flex;align-items:center;gap:12px;">
+          vivio
+          <span id="typing-text" class="typing-text"></span>
+          <span class="cursor">|</span>
+        </span>
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="inspiracje.html">Inspiracje</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+    <div id="music-modal" style="position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.38);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px);">
+      <div style="background:#fff;padding:36px 32px 28px 32px;border-radius:18px;box-shadow:0 8px 32px 0 rgba(0,0,0,0.13);max-width:90vw;width:340px;text-align:center;">
+        <div style="font-size:1.25rem;font-weight:600;margin-bottom:18px;">Czy chcesz włączyć muzykę?</div>
+        <div style="font-size:1.02rem;color:#666;margin-bottom:24px;">Na tej podstronie możesz posłuchać cichej muzyki w tle.</div>
+        <button id="music-yes" style="padding:12px 32px;border-radius:10px;background:#111;color:#fff;font-size:1.08rem;font-weight:500;border:none;cursor:pointer;margin-right:12px;">Tak</button>
+        <button id="music-no" style="padding:12px 32px;border-radius:10px;background:#eee;color:#222;font-size:1.08rem;font-weight:500;border:none;cursor:pointer;">Nie</button>
+      </div>
+    </div>
+    
+    <section class="inspire-hero">
+      <div class="inspire-hero-row">
+        <div class="inspire-person">
+          <div class="inspire-img-wrap">
+            <img src="assets/img/bill.jpg" alt="Bill Gates" class="inspire-img" />
+          </div>
+          <div class="inspire-name">Bill Gates</div>
+          <div class="inspire-desc" style="text-align:center;font-size:0.98rem;color:#666;margin-top:4px;">Założyciel Microsoft</div>
+        </div>
+        <div class="inspire-person">
+          <div class="inspire-img-wrap inspire-img-gray">
+            <img src="assets/img/terry.jpg" alt="Terry Davis" class="inspire-img" />
+            <div class="inspire-ribbon" aria-label="Czarna wstążka"></div>
+          </div>
+          <div class="inspire-name">Terry Davis</div>
+          <div class="inspire-desc" style="text-align:center;font-size:0.98rem;color:#666;margin-top:4px;">Twórca TempleOS i HolyC</div>
+        </div>
+        <div class="inspire-person">
+          <div class="inspire-img-wrap">
+            <img src="assets/img/linus.webp" alt="Linus Torvalds" class="inspire-img" />
+          </div>
+          <div class="inspire-name">Linus Torvalds</div>
+          <div class="inspire-desc" style="text-align:center;font-size:0.98rem;color:#666;margin-top:4px;">Twórca Linuxa</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header-row">
+        <h2 class="section-header">Osoby które mnie inspirują</h2>
+        <div class="section-line"></div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
+      </p>
+    </section>
+
+    </main>
+
+    <footer>
+      <p>© 2025 vivio</p>
+    </footer>
+    <script src="music.js"></script>
+    <script src="loader.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

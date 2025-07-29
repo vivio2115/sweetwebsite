@@ -30,17 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
   typingElement = document.getElementById("typing-text");
   if (typingElement && texts.length) setTimeout(type, 500);
 });
-document.body.style.overflow = 'hidden';
-    window.addEventListener('DOMContentLoaded', function () {
-        setTimeout(function () {
-          const preloader = document.getElementById('preloader');
-          preloader.style.opacity = '0';
-          setTimeout(function () {
-            preloader.style.display = 'none';
-        document.body.style.overflow = '';
-          }, 300);
-        }, 3000);
-    });
 document.querySelectorAll('nav a[href^="#"], .hero-buttons a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href').slice(1);

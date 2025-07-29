@@ -1,3 +1,70 @@
+/* --- Inspiracje hero --- */
+.inspire-hero {
+  margin-top: 38px;
+  margin-bottom: 38px;
+}
+.inspire-hero-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 48px;
+}
+.inspire-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+}
+.inspire-img-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #222;
+  background: #f7f7f7;
+  position: relative;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+}
+.inspire-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: none;
+}
+.inspire-img-gray .inspire-img {
+  filter: grayscale(1) contrast(0.92);
+}
+
+.inspire-ribbon {
+  position: absolute;
+  bottom: 0;
+  width: 16px;
+  height: 130px;
+  background: #000;
+  border-radius: 0 0 6px 6px;
+  transform: rotate(-16deg) translateY(12px);
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.22);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.inspire-name {
+  font-size: 1.08rem;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+@media (max-width: 900px) {
+  .inspire-hero-row { gap: 18px; }
+  .inspire-person { width: 120px; }
+  .inspire-img-wrap { width: 120px; height: 120px; }
+}
+}
 
 #preloader {
   position: fixed;
