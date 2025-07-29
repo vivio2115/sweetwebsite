@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vivio – backend & low-level developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ce61199c3b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <span class="logo">vivio</span>
+        <ul>
+          <li><a href="#about">Profil</a></li>
+          <li><a href="#work">Umiejętności</a></li>
+          <li><a href="#projects">Projekty</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="hero">
+  <img src="assets/avatar.jpg" alt="Avatar Vivio" class="avatar"/>
+  <div class="hero-text">
+    <h1>Cześć, jestem vivio</h1>
+    <h2><span id="typing-text"></span><span class="cursor">|</span></h2>
+    <p>Od 5 lat tworzę backendy, boty Discord, czasem strony. Brałem udział w 7 większych projektach.</p>
+  </div>
+</header>
+
+
+      <section id="about" class="section fade">
+        <h2>Profil</h2>
+        <p>
+          Programuję od ponad 5 lat. Moją największą pasją jest programowanie niskopoziomowe — uwielbiam C, C++, Assembler i rozgryzanie jak działa sprzęt od środka.
+        </p>
+        <p>
+          Poza tym rozwijam backendy w Go i JavaScript oraz buduję aplikacje związane z Discordem.
+        </p>
+        <p>
+          Moją największą pozatechniczną zajawką są samoloty, zwłaszcza Boeing 777X.
+        </p>
+      </section>
+
+    <section id="skills">
+    <h2>Umiejętności</h2>
+    <div class="skills-grid">
+      <div class="skill" data-name="HTML5"><img src="assets/icons/html.svg" alt="HTML5"/></div>
+      <div class="skill" data-name="CSS3"><img src="assets/icons/css.svg" alt="CSS3"/></div>
+      <div class="skill" data-name="JavaScript"><img src="assets/icons/js.svg" alt="JS"/></div>
+      <div class="skill" data-name="Go"><img src="assets/icons/go.svg" alt="Go"/></div>
+      <div class="skill" data-name="C/C++"><img src="assets/icons/cpp.svg" alt="C++"/></div>
+      <div class="skill" data-name="ASM"><img src="assets/icons/asm.svg" alt="ASM"/></div>
+    </div>
+  </section>
+
+      <section id="work" class="section fade">
+        <h2>Umiejętności</h2>
+        <ul class="skills">
+          <li><strong>Backend:</strong> Node.js, Go, REST API</li>
+          <li><strong>Boty:</strong> Discord.js, Gateway + REST, event-driven architektura</li>
+          <li><strong>Low-level:</strong> C, C++, Assembler, systemy, kernelle, bootloadery</li>
+          <li><strong>Frontend:</strong> HTML, CSS, czysty JS (czasem)</li>
+          <li><strong>Narzędzia:</strong> Git, Docker, Linux, VSCode</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section fade">
+        <h2>Projekty</h2>
+        <div class="project">
+          <h3>tinyOS</h3>
+          <p>Eksperymentalny system operacyjny w C, z własnym bootloaderem i pamięcią fizyczną.</p>
+        </div>
+        <div class="project">
+          <h3>GoPanel</h3>
+          <p>Panel backendowy do zarządzania usługami serwerowymi — napisany w Go + Vanilla JS.</p>
+        </div>
+        <div class="project">
+          <h3>discord.js-utils</h3>
+          <p>Rozszerzenia do bibliotek Discord API – ułatwiają integrację z REST i eventami.</p>
+        </div>
+        <div class="project">
+          <h3>FlightMap</h3>
+          <p>Mapa tras samolotów z danymi z live API – UI minimalistyczne, ale funkcjonalne.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section fade">
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:vivio@example.com">vivio@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/vivio2115" target="_blank">github.com/vivio2115</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 vivio – backend & low-level developer. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
