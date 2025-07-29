@@ -4,44 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vivio – backend & low-level developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/ce61199c3b.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id="preloader">
+      <div class="preloader-content">
+        <img src="assets/gifs/4x.gif" alt="cat..." class="preloader-gif" />
+      </div>
+    </div>
     <nav>
       <div class="nav-container">
-        <span class="logo">vivio</span>
+        <span class="logo" style="display:flex;align-items:center;gap:12px;">
+          vivio
+          <span id="typing-text" class="typing-text"></span>
+          <span class="cursor">|</span>
+        </span>
         <ul>
-          <li><a href="#about">Profil</a></li>
+          <li><a href="#about">O mnie</a></li>
           <li><a href="#skills">Umiejętności</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </div>
     </nav>
 
+
     <main class="container">
       <header class="hero">
-        <img src="assets/avatar.jpg" alt="Avatar Vivio" class="avatar"/>
-        <h1>Cześć, jestem vivio</h1>
-        <h2><span id="typing-text"></span><span class="cursor">|</span></h2>
-        <p>Od 5 lat tworzę backendy, boty Discord, czasem strony. Brałem udział w 7 większych projektach.</p>
+        <div class="hero-row">
+          <img src="assets/avatar.jpg" alt="Avatar Vivio" class="avatar hero-avatar"/>
+          <div class="hero-text">
+            <h1 style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <span aria-label="Cześć!" role="img">👋</span> Cześć, jestem vivio
+            </h1>
+            <div class="hero-desc">Od 5 lat tworzę backendy, boty Discord, czasem strony.<br>Brałem udział w 7 większych projektach.</div>
+            <div class="hero-buttons">
+              <a href="#about" class="btn btn-primary">O mnie</a>
+              <a href="#contact" class="btn btn-secondary">Kontakt</a>
+            </div>
+          </div>
+        </div>
       </header>
 
+      <div class="tech-block tech-block-below">
+        <div class="tech-header-row">
+          <h2 class="section-header">Często używam</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="tech-icons tech-icons-below">
+          <span class="tech-icon" title="HTML5"><img src="assets/icons/html.svg" alt="HTML5" /></span>
+          <span class="tech-icon" title="CSS3"><img src="assets/icons/css.svg" alt="CSS3" /></span>
+          <span class="tech-icon" title="JavaScript"><img src="assets/icons/js.svg" alt="JavaScript" /></span>
+          <span class="tech-icon" title="Go"><img src="assets/icons/go.svg" alt="Go" /></span>
+          <span class="tech-icon" title="C/C++"><img src="assets/icons/cpp.svg" alt="C/C++" /></span>
+          <span class="tech-icon" title="Assembler"><img src="assets/icons/asm.svg" alt="Assembler" /></span>
+        </div>
+      </div>
+
       <section id="about" class="section">
-        <h2>Profil</h2>
+        <div class="section-header-row">
+          <h2 class="section-header">O mnie</h2>
+          <div class="section-line"></div>
+        </div>
         <p>
-          Programuję od ponad 5 lat. Moją największą pasją jest programowanie niskopoziomowe — uwielbiam C, C++, Assembler i rozgryzanie jak działa sprzęt od środka.
+          Uczę się programowania od 5 lat. Moją największą pasją jest programowanie niskopoziomowe C, C++, Assembler i rozgryzanie jak działa sprzęt od środka (co nie zawsze jest proste).
         </p>
         <p>
           Poza tym rozwijam backendy w Go i JavaScript oraz buduję aplikacje związane z Discordem.
         </p>
         <p>
-          Moją największą pozatechniczną zajawką są samoloty, zwłaszcza Boeing 777X.
+          Moje hobby nie związane z programowaniem to lotnicto. Uwielbiam robić zdjęcia samolotom.
         </p>
       </section>
 
       <section id="skills" class="section">
-        <h2>Umiejętności</h2>
+        <div class="section-header-row">
+          <h2 class="section-header">Umiejętności</h2>
+          <div class="section-line"></div>
+        </div>
         <ul class="skills">
           <li><strong>Backend:</strong> Node.js, Go, REST API</li>
           <li><strong>Boty:</strong> Discord.js, Gateway + REST, event-driven architektura</li>
@@ -52,7 +95,10 @@
       </section>
 
       <section id="contact" class="section">
-        <h2>Kontakt</h2>
+        <div class="section-header-row">
+          <h2 class="section-header">Kontakt</h2>
+          <div class="section-line"></div>
+        </div>
         <div class="contact-info">
           <a href="mailto:vivio@example.com" class="contact-item">
             <i class="fas fa-envelope"></i>

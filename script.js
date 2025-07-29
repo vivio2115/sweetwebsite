@@ -1,29 +1,53 @@
 const texts = ["Backend Developer", "Bot Developer", "System Architect", "Low-Level Enthusiast"];
 let index = 0;
 let charIndex = 0;
-let typingElement = document.getElementById("typing-text");
+let typingElement;
 
 function type() {
+  if (!typingElement) return;
   if (charIndex < texts[index].length) {
     typingElement.textContent += texts[index][charIndex];
     charIndex++;
     setTimeout(type, 100);
   } else {
-    setTimeout(erase, 2000);
+    setTimeout(erase, 1700);
   }
 }
 
 function erase() {
+  if (!typingElement) return;
   if (charIndex > 0) {
     typingElement.textContent = texts[index].substring(0, charIndex - 1);
     charIndex--;
-    setTimeout(erase, 60);
+    setTimeout(erase, 50);
   } else {
     index = (index + 1) % texts.length;
-    setTimeout(type, 300);
+    setTimeout(type, 350);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (texts.length) setTimeout(type, 500);
+  typingElement = document.getElementById("typing-text");
+  if (typingElement && texts.length) setTimeout(type, 500);
+});
+document.body.style.overflow = 'hidden';
+    window.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+          const preloader = document.getElementById('preloader');
+          preloader.style.opacity = '0';
+          setTimeout(function () {
+            preloader.style.display = 'none';
+        document.body.style.overflow = '';
+          }, 300);
+        }, 3000);
+    });
+document.querySelectorAll('nav a[href^="#"], .hero-buttons a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
 });
