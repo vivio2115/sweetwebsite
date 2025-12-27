@@ -1,4 +1,4 @@
-// Enhanced Portfolio JavaScript - Optimized and Feature-Rich
+// Enhanced Portfolio JavaScript - Optimized and Feature-Ric
 
 class PortfolioApp {
   constructor() {
